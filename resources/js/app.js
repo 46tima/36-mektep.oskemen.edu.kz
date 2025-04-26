@@ -1,7 +1,12 @@
-import './bootstrap'; // Импортируйте bootstrap, если он вам нужен
 import { createApp } from 'vue';
-import MainPage from './components/MainPage.vue'; // Импортируйте ваш компонент
+import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
+import MainContent from './components/MainContent.vue';
 
 const app = createApp({});
-app.component('main-page', MainPage); // Зарегистрируйте компонент
+
+app.component('app-header', Header);
+app.component('app-footer', Footer);
+app.component('main-content', MainContent);
+
 app.mount('#app');

@@ -8,7 +8,9 @@
 </head>
 <body>
     <div id="app">
-        <main-page></main-page>
+        <app-header></app-header>
+        <main-content></main-content>
+        <app-footer></app-footer>
     </div>
 </body>
 </html>

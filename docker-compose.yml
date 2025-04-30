@@ -1,0 +1,26 @@
+services:
+    db:
+        image: mysql:latest
+        restart: always
+        environment:
+            MYSQL_DATABASE: mektep_db
+            MYSQL_USER: mektep_user
+            MYSQL_PASSWORD: supersecurepassword
+            MYSQL_ROOT_PASSWORD: rootpassword # Установите root-пароль
+        ports:
+            - "3306:3306"
+        volumes:
+            - db_data:/var/lib/mysql
+
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        ports:
+            - "8080:80"
+        environment:
+            PMA_HOST: db
+            PMA_USER: mektep_user
+            PMA_PASSWORD: supersecurepassword
+
+volumes:
+    db_data:

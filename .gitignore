@@ -36,3 +36,23 @@ yarn-error.log
 /public/mix-manifest.json
 /public/css/*.css.map
 /public/js/*.js.map
+
+# Laravel: кеш и сессии
+/storage/framework/cache/data
+/storage/framework/sessions
+/storage/framework/views
+/storage/logs
+
+# Docker
+.docker
+
+# Файлы для тестирования и CI/CD
+/phpunit-result.xml
+/phpunit-coverage.xml
+
+# IDE временные файлы
+.idea/
+.vscode/
+
+# Набор файлов для npm/yarn
+/node_modules/

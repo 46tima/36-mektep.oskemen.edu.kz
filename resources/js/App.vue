@@ -1,15 +1,13 @@
 <template>
-    <div>
-      <Header />
-  
-      <router-view></router-view>
-  
-      <Footer />
-    </div>
-  </template>
-  
-  <script setup>
-  import Header from '@/components/Header.vue';
-  import Footer from '@/components/Footer.vue';
-  </script>
-  
+  <AppLayout>
+    <router-view />
+  </AppLayout>
+</template>
+
+<script>
+import AppLayout from './Layouts/AppLayout.vue';
+
+export default {
+  components: { AppLayout },
+};
+</script>
